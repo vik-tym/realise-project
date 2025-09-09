@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+ <nav>  
+<a href ="index.html"> </a>
+<a href= "">Menu </a>
+<a href=""> Contacts</a>
+<a href="">about us  </a>
+<a href="menu.icon"></a>
+
+
+ </nav>
+    </header>
+
+   
+<main>
+  
+  <h2>About us</h2>
+    <p> This website was made too help you find appropriate recipe at the moment you wish. </p>
+    </section> 
+    <h3> Contacts </h3>
+    <p1> <strong> Name:</strong>RecipeFinder</p1>
+    <p2> <strong> phone number:</strong>+3800677384543</p2>
+    <p3> <strong> e-mail: </strong> vicktoria.tymoshenko.a@gmail.com </p3>
+    <p4> If you find the content of the website unpleasant or unvalid ,please contact with us  </p4>
+  </section>
+</main>
+ <footer>
+        
+
+<div class="footer-column">
+    <h3> You may also find us there:</h3>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank">📘</a>
+      <a href="https://instagram.com" target="_blank">📸</a>
+    
+    </div>

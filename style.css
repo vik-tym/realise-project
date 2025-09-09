@@ -5,7 +5,7 @@ body {
     font-family: "Montserrat Alternates", sans-serif; 
     margin:0 px;
     padding:0 px;
-    background-color: azure;
+    background-color: rgb(254, 250, 224);
 }
 header{
     background-color: rgb(129, 144, 103);
@@ -14,3 +14,21 @@ header{
     justify-content: center;
     text-align: center;
 }
+nav  {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+nav a{  
+    background-color: rgb(129, 144, 103);
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+    
+nav a:hover{
+      transform: translateY(-4px);
+}
+
+
