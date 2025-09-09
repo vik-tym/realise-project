@@ -1,31 +1,379 @@
 <!DOCTYPE html>
-    <html>
-<body> 
+<html>
+  <body>
     <head>
-        <meta charset="UTF8">
-        <meta name="RecipeFinder">
-        <meta description="">
-         <link rel="stylesheet" href="style.css">
+      <meta charset="UTF8" />
+      <meta name="RecipeFinder" />
+      <meta description="" />
     </head>
-    <header> 
-   <h1> Recipe Finder</h1>
-   <nav> 
-    <a href="#">About Us</a>
-    <a href="#"> Home </a>
-    <a href="#"> Contacts </a>
-   </nav>
+    <link rel="stylesheet" href="style.css" />
+    <header>
+      <h1>Recipe Finder</h1>
+      <nav>
+        <a href="#">About Us</a>
+        <a href="#"> Home </a>
+        <a href="#"> Contacts </a>
+      </nav>
     </header>
-    <main> 
-        <section class= "search">
-        <input type="text" id="searchInput" placeholder="Enter ingredients">
-        <button onclick="findRecipes()">Find Recipes</button>
-        </section>
+    <main>
+      <h2>Welcome to Recipe Finder!</h2>
+      <p>
+        Your one-stop destination for discovering delicious recipes
+        tailored to your ingredients and preferences. Whether you're a
+        seasoned chef or a home cook, our platform is designed to make
+        meal planning easy and enjoyable. Explore a wide variety of
+        recipes, from quick weeknight dinners to gourmet dishes, all
+        at your fingertips. Start your culinary adventure with Recipe
+        Finder today!
+      </p>
 
+      <div class="cards">
+        <!-- ==== HTML: paste INSIDE your <div class="cards"> ... </div> ==== -->
+
+        <div class="card" data-category="chicken quick">
+          <img
+            src="https://hips.hearstapps.com/hmg-prod/images/creamy-garlic-chicken-horizontal-1676061750.jpg?crop=1xw:0.8439334637964775xh;center,top&resize=1200:*"
+            alt="Creamy Garlic Chicken"
+          />
+          <div class="content">
+            <h3>Creamy Garlic Chicken</h3>
+            <p>
+              Pan-seared chicken in a silky garlic–parmesan sauce.
+              Weeknight friendly and totally comforting.
+            </p>
+            <div class="meta">
+              <span>⏱ 25 min</span><span>🍽 4 servings</span
+              ><span>⭐ 4.8</span>
+            </div>
+            <div class="tags">
+              <span class="tag">One-pan</span
+              ><span class="tag">Family</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="breakfast vegetarian">
+          <img
+            src="https://www.allrecipes.com/thmb/8NccFzsaq0_OZPDKmf7Yee-aG78=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AvocadoToastwithEggFranceC4x3-bb87e3bbf1944657b7db35f1383fabdb.jpg"
+            alt="Avocado Toast"
+          />
+          <div class="content">
+            <h3>Avocado Toast with Egg</h3>
+            <p>
+              Crunchy sourdough topped with creamy avocado,
+              soft-boiled egg, chili flakes, and lemon zest.
+            </p>
+            <div class="meta">
+              <span>⏱ 10 min</span><span>🍽 2 servings</span
+              ><span>⭐ 4.6</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Vegetarian</span
+              ><span class="tag">Breakfast</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="seafood rice">
+          <img
+            src="https://images.getrecipekit.com/20230301155537-spicy-20tuna-20poke-20bowls-20main-20image.jpg?aspect_ratio=4:3&quality=90&"
+            alt="Tuna Poke Bowl"
+          />
+          <div class="content">
+            <h3>Spicy Tuna Poke Bowl</h3>
+            <p>
+              Marinated tuna, jasmine rice, crispy cucumbers, edamame,
+              and a sriracha-mayo drizzle.
+            </p>
+            <div class="meta">
+              <span>⏱ 20 min</span><span>🍽 2 bowls</span
+              ><span>⭐ 4.9</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Gluten-free</span
+              ><span class="tag">Fresh</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="pasta vegetarian quick">
+          <img
+            src="https://www.contadina.com/sites/default/files/Tomato%20Basil%20Pasta%20copy.jpg"
+            alt="Tomato Basil Pasta"
+          />
+          <div class="content">
+            <h3>One-Pot Tomato Basil Pasta</h3>
+            <p>
+              All ingredients cook together for a glossy, garlicky
+              sauce that clings to every strand.
+            </p>
+            <div class="meta">
+              <span>⏱ 15 min</span><span>🍽 4 servings</span
+              ><span>⭐ 4.7</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Budget</span
+              ><span class="tag">Quick</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card"
+          data-category="salad vegetarian mediterranean"
+        >
+          <img
+            src="https://hips.hearstapps.com/hmg-prod/images/greek-salad-index-642f292397bbf.jpg?crop=0.888888888888889xw:1xh;center,top&resize=1200:*"
+            alt="Greek Salad"
+          />
+          <div class="content">
+            <h3>Greek Salad with Feta</h3>
+            <p>
+              Juicy tomatoes, crunchy cucumbers, olives, and briny
+              feta tossed in a lemon-oregano dressing.
+            </p>
+            <div class="meta">
+              <span>⏱ 12 min</span><span>🍽 3–4 servings</span
+              ><span>⭐ 4.6</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Mediterranean</span
+              ><span class="tag">No-cook</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="beef asian">
+          <img
+            src="https://recipe30.com/wp-content/uploads/2024/03/Beef-And-Broccoli-Stir-Fry.jpg"
+            alt="Beef Broccoli"
+          />
+          <div class="content">
+            <h3>Beef Stir-Fry with Broccoli</h3>
+            <p>
+              Tender flank steak, crisp broccoli, and a glossy
+              ginger-garlic sauce. Better than takeout.
+            </p>
+            <div class="meta">
+              <span>⏱ 22 min</span><span>🍽 4 servings</span
+              ><span>⭐ 4.8</span>
+            </div>
+            <div class="tags">
+              <span class="tag">High-protein</span
+              ><span class="tag">Wok</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="breakfast vegetarian sweet">
+          <img
+            src="https://alifewellplanted.com/wp-content/uploads/2021/01/Stack-of-Blueberry-Pancakes5.jpg"
+            alt="Blueberry Pancakes"
+          />
+          <div class="content">
+            <h3>Blueberry Oat Pancakes</h3>
+            <p>
+              Fluffy pancakes with hearty oats and bursting
+              blueberries. Maple syrup highly recommended.
+            </p>
+            <div class="meta">
+              <span>⏱ 18 min</span><span>🍽 8 pancakes</span
+              ><span>⭐ 4.5</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Kid-friendly</span
+              ><span class="tag">Make-ahead</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="pizza vegetarian">
+          <img
+            src="https://cookingitalians.com/wp-content/uploads/2024/11/Margherita-Pizza.jpg"
+            alt="Margherita Pizza"
+          />
+          <div class="content">
+            <h3>Classic Margherita Pizza</h3>
+            <p>
+              Thin crust, bright tomato sauce, fresh mozzarella, and
+              plenty of basil leaves.
+            </p>
+            <div class="meta">
+              <span>⏱ 1 h</span><span>🍽 2–3 servings</span
+              ><span>⭐ 4.9</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Italian</span
+              ><span class="tag">Baked</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="fish healthy">
+          <img
+            src="https://static01.nyt.com/images/2024/11/24/multimedia/Salmon-With-Lemon-Herb-Marinaderex-zcfp/Salmon-With-Lemon-Herb-Marinaderex-zcfp-videoSixteenByNineJumbo1600-v2.jpg"
+            alt="Lemon Herb Salmon"
+          />
+          <div class="content">
+            <h3>Lemon Herb Salmon</h3>
+            <p>
+              Oven-baked salmon with garlic, dill, and lemon. Juicy,
+              flaky, and wonderfully fresh.
+            </p>
+            <div class="meta">
+              <span>⏱ 20 min</span><span>🍽 2–4 servings</span
+              ><span>⭐ 4.7</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Low-carb</span
+              ><span class="tag">Healthy</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="dessert chocolate">
+          <img
+            src="https://www.foodnetwork.com/content/dam/images/food/fullset/2014/2/19/1/WU0701H_Molten-Chocolate-Cakes_s4x3.jpg"
+            alt="Chocolate Lava Cake"
+          />
+          <div class="content">
+            <h3>Chocolate Lava Cake</h3>
+            <p>
+              Molten-center chocolate cakes dusted with cocoa and a
+              touch of espresso.
+            </p>
+            <div class="meta">
+              <span>⏱ 30 min</span><span>🍽 4 cakes</span
+              ><span>⭐ 4.9</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Party</span
+              ><span class="tag">Make-ahead batter</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="rice vegetarian">
+          <img
+            src="https://www.allrecipes.com/thmb/854efwMYEwilYjKr0FiF4FkwBvM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/85389-gourmet-mushroom-risotto-DDMFS-4x3-a8a80a8deb064c6a8f15452b808a0258.jpg"
+            alt="Mushroom Risotto"
+          />
+          <div class="content">
+            <h3>Creamy Mushroom Risotto</h3>
+            <p>
+              Arborio rice simmered with mushrooms, white wine, and
+              parmesan until irresistibly creamy.
+            </p>
+            <div class="meta">
+              <span>⏱ 35 min</span><span>🍽 4 servings</span
+              ><span>⭐ 4.8</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Comfort</span
+              ><span class="tag">Stovetop</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="vegan bowl">
+          <img
+            src="https://i2.wp.com/hipfoodiemom.com/wp-content/uploads/2017/05/buddha-bowl_3193_fb.jpg"
+            alt="Buddha Bowl"
+          />
+          <div class="content">
+            <h3>Vegan Buddha Bowl</h3>
+            <p>
+              Roasted chickpeas, quinoa, colorful veggies, and
+              tahini-lemon sauce.
+            </p>
+            <div class="meta">
+              <span>⏱ 25 min</span><span>🍽 2 bowls</span
+              ><span>⭐ 4.6</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Vegan</span
+              ><span class="tag">High-fiber</span>
+            </div>
+            <div class="actions">
+              <button class="btn primary">View recipe</button
+              ><button class="btn ghost" onclick="saved()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer> 
-        <script src="style.css"> </script>
-        <script src="main.js"> </script>
+    <footer>
+        <p>&copy; 2024 Recipe Finder. All rights reserved.</p>
     </footer>
-</body>
-
-    </html>
+    <script src="style.css"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
