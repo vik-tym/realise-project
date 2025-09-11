@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title> Contacts- Recipe Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"/>
+      <style>
+        :root {
+        --green: #0a400c;
+        --sage: #819067;
+        --sand: #b1ab86;
+        --cream: #fefae0;
+        --radius: 18px;
+        --shadow: 0 10px 28px rgba(10, 64, 12, 0.12);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+      }
+title{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+          Arial, sans-serif;
+        background: var(--cream);
+        color: var(--green);
+        line-height: 1.6;
+}
+body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+          Arial, sans-serif;
+        background: var(--cream);
+        background-color: rgb(254, 250, 224);;
+        color: var(--green);
+        line-height: 1.6;
+      }
+      header{
+      position: sticky;
+      top:0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+      background: color-mix(in srgb, var(--cream) 85%, white);
+      border-bottom: 1px solid  #819067;
+      }
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+      }
+      .brand .logo {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--sage), var(--sand));
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-weight: 800;
+        box-shadow: var(--shadow);
+      }
+       .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px ;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--green);
+        font-weight: 600;
+        margin-left: 16px;
+        padding: 8px 12px;
+        border-radius: 10px;
+        transition: 0.18s ease;
+      }
+      nav a:hover {
+        background: color-mix(in srgb, var(--sand) 28%, white);
+        transform: translateY(-4px);
+}
+      
+      section {
+        padding: 36px 0;
+      }
+       h3 {
+        text-align: center;
+        font-size: clamp(22px, 3.2vw, 30px);
+        margin: 0 0 14px;
+      }
+      p{
+        justify-content: baseline;
+
+        text-align:space-between ;
+      }
+      .cta {
+        background: linear-gradient(
+          135deg,
+          color-mix(in srgb, var(--sage) 18%, white),
+          color-mix(in srgb, var(--sand) 18%, white)
+        );
+        border: 1px solid
+          color-mix(in srgb, var(--sand) 60%, transparent);
+        border-radius: 22px;
+        padding: 22px;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .btn {
+        appearance: none;
+        border: 0;
+        cursor: pointer;
+        padding: 12px 16px;
+        border-radius: 12px;
+        font-weight: 700;
+      }
+      .btn.primary {
+        background: var(--green);
+        color: #fff;
+      }
+      .btn.ghost {
+        background: #fff;
+        color: var(--green);
+        border: 1px solid
+          color-mix(in srgb, var(--sage) 40%, transparent);
+      }
+      footer {
+        margin-top: 32px;
+        border-top: 1px solid
+          color-mix(in srgb, var(--sand) 45%, transparent);
+        background: color-mix(in srgb, var(--cream) 85%, white);
+        color: color-mix(in srgb, var(--green) 75%, black);
+      }
+      .foot {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: space-between;
+        padding: 18px 0;
+        font-size: 0.95rem;
+      }
+      .social-icons{
+        text-align: center;
+
+      }
+
+
+      </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+        <a class="brand" href="index.html">
+          <div class="logo">T</div>
+          <span>Recipe Finder</span>
+    
+       <nav>
+          <a href="index.html">Home</a>
+          <a
+            href="contacts.html"
+            style="
+              background: color-mix(in srgb, var(--sand) 28%, white);
+            "
+            >Contact</a
+          >
+          <a href="aboutus.html">About</a>
+        </nav>
+      </div>
+   
+
+    </header>
+
+   
+<main class="wrap">
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <span class="badge"
+            >Since 2018 • 2,000+ home-tested recipes</span
+          >
+          <h1>
+            We’d love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out.
+
+          </h1>
+          <p>
+            <div> 
+              📍 Address
+             123 Main Street, Suite 456
+            Kyiv
+            </div>
+           <div>
+              📞 Phone
+          +1 (234) 567-8901
+           </div>
+           <div>
+             ✉️ Email
+           hello@yourcompany.com
+           </div>
+          </p>
+        </div>
+     <section>
+        <div class="cta">
+          <div>
+            <h3 style="margin: 0 0 6px">Cook with us every week</h3>
+            <p
+              style="
+                margin: 0;
+                color: color-mix(in srgb, var(--green) 75%, black);
+              "
+            >
+              Subscribe for a 15-minute dinner, a weekend bake, and a
+              smart tip — every Friday.
+            </p>
+          </div>
+          <div style="display: flex; gap: 8px">
+            <a class="btn ghost" href="recipes.html"
+              >Explore Recipes</a
+            >
+            <a class="btn primary" href="aboutus.html">About Us</a>
+          </div>
+        </div>
+      </section>
+</main>
+</body>
+ <footer>
+        
+
+<div class="footer-column">
+    <h3> You may also find us there:</h3>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank">📘</a>
+      <a href="https://instagram.com" target="_blank">📸</a>
+    <div class="wrap foot">
+        <div>
+          © <span id="year"></span> Tasty Recipes. Cook with love.
+        </div>
+        <div>
+          Made with <span style="font-weight: 800">#0A400C</span>,
+          <span style="font-weight: 800">#819067</span>,
+          <span style="font-weight: 800">#B1AB86</span>,
+          <span style="font-weight: 800">#FEFAE0</span>
+        </div>
+      </div>
+    </div>
